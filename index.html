@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Room Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        div {
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        select, input {
+            width: 100%;
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        p {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Room Booking</h1>
+    <div>
+        <label for="room-type">Choose a room type:</label>
+        <select id="room-type">
+            <option value="">Select a room</option>
+            <option value="$100">Standard - $100/night</option>
+            <option value="$150">Deluxe - $150/night</option>
+            <option value="$200">Suite - $200/night</option>
+        </select>
+    </div>
+    <div>
+        <label for="nights">Number of nights:</label>
+        <input type="number" id="nights" value="1">
+    </div>
+    <button id="calculate-total-btn" onclick="calculateTotal()">Calculate Total</button>
+    <p>Total Cost: $<span id="total-cost">0.00</span></p>
+
+    <button id="confirm-booking-btn" onclick="confirmBooking()">Confirm Booking</button>
+    <p id="confirmation-msg"></p>
+    <button id="reset-form-btn" onclick="resetForm()">Reset Form</button>
+
+
+    <!-- <script href="Task2.js"> </script>-->
+    <!--Bugg number 1: the script element uses href attribute instead of src attribute to link to "Task2.js"
+    Explanation:
+    href stands for hypertext reference and is used to refer to another html element/file.
+    src stands for source and is used for external resources(non-HTML file.) like scripts, images, etc.
+    
+    Correction: src="Task2.js"-->
+
+    <script src="Task2.js"></script>
+</body>
+</html>
